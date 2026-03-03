@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Markly Primary Colors -->
+    <color name="primary_blue">#3F51B5</color>
+    <color name="dark_blue">#172554</color>
+    <color name="light_blue">#3B82F6</color>
+    <color name="markly_purple">#B875F0</color>
+    <color name="markly_blue">#7C4DFF</color>
+
+    <!-- Category Colors -->
+    <color name="category_social_media">#1976D2</color>
+    <color name="category_entertainment">#C2185B</color>
+    <color name="category_games">#7B1FA2</color>
+    <color name="category_programming">#388E3C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="blue_accent">#3B82F6</color>
+    <color name="url_blue">#3498DB</color>
+
+    <!-- Backgrounds -->
+    <color name="background_light">#F8FAFC</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Button Colors -->
+    <color name="button_delete">#E74C3C</color>
+
+    <!-- Required by Android -->
+    <color name="black">#FF000000</color>
+</resources>

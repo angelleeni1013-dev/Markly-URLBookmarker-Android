@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        android:backgroundTint="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Rest of your content stays the same -->
+            <!-- Title and Category Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvBookmarkTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Google"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:letterSpacing="-0.01" />
+
+                <TextView
+                    android:id="@+id/tvBookmarkCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOOLS"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="#3F51B5" />
+
+            </LinearLayout>
+
+            <!-- URL with Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:tint="#3F51B5"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/tvBookmarkUrl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="https://www.google.com"
+                    android:textSize="13sp"
+                    android:textColor="#3F51B5"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvBookmarkDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Search engine giant."
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- Bottom Row: Date and Action Icons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvBookmarkDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20/11/2025"
+                    android:textSize="13sp"
+                    android:textColor="#999999" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivCopy"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_save"
+                        android:tint="#999999"
+                        android:padding="10dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Copy URL" />
+
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Edit Bookmark"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:tint="@color/dark_blue" />
+
+                    <ImageView
+                        android:id="@+id/ivDelete"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Delete Bookmark"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:tint="@color/button_delete" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="@color/primary_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="Edit Bookmark"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Form Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="220dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Left Column -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Title Input -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/title"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etEditTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:autofillHints="name"
+                            android:background="@drawable/edit_text_background"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textSize="13sp" />
+
+                        <!-- URL Input -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/url_link"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etEditUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:autofillHints="url"
+                            android:background="@drawable/edit_text_background"
+                            android:importantForAutofill="no"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textSize="13sp" />
+
+                        <!-- Description Input -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/description"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etEditDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:autofillHints="none"
+                            android:background="@drawable/edit_text_background"
+                            android:gravity="top|start"
+                            android:importantForAutofill="no"
+                            android:inputType="textMultiLine"
+                            android:maxLines="2"
+                            android:padding="8dp"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <!-- Right Column -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Category Spinner -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/category"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnerEditCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_border"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:popupBackground="#FFFFFF" />
+
+                        <!-- Date Picker -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/date"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutEditDatePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/edit_text_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/tvEditSelectedDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="21-11-2025"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:contentDescription="Select Date"
+                                android:src="@drawable/ic_calendar" />
+
+                        </LinearLayout>
+
+                        <!-- Update Button -->
+                        <Button
+                            android:id="@+id/btnUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/button_background"
+                            android:text="@string/update"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- Left Side: Terms Content (70% width) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#3F51B5" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Scrollable Terms Content -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_details"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!-- Right Side: Checkbox and Buttons (30% width) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- Checkbox -->
+            <CheckBox
+                android:id="@+id/cbAgree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_agree"
+                android:textSize="12sp"
+                android:textColor="#333333"
+                android:buttonTint="#3F51B5" />
+
+            <!-- Accept Button -->
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:text="Accept"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#3F51B5"
+                android:enabled="false" />
+
+            <!-- Decline Button -->
+            <Button
+                android:id="@+id/btnDecline"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:text="Decline"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E0E0E0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
